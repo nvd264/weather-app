@@ -10,6 +10,7 @@ function* getCityWeatherSaga({ payload: { cityName } }) {
     yield put(endLoadingAction());
   } catch (err) {
     console.error('Unexpected Error'.err);
+    yield put(endLoadingAction());
   }
 }
 

@@ -1,4 +1,4 @@
-import { searchLocationUrl, getLocationInfoUrl } from './url';
+import { searchLocationUrl } from './url';
 
 const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
@@ -35,10 +35,4 @@ export const searchLocationApi = cityName => {
     .then(response => response.json())
     .then(data => transformWeatherData(data))
     .catch(err => console.log('searchLocationApi Error', err));
-}
-
-export const getLocationInfoApi = woeid => {
-  return fetch(getLocationInfoUrl(woeid))
-    .then(response => response.json())
-    .catch(() => []);
 }

@@ -3,7 +3,6 @@ export const END_LOADING = 'END_LOADING';
 export const GET_CITY_WEATHER = 'GET_CITY_WEATHER';
 export const UPDATE_CITY_WEATHER = 'UPDATE_CITY_WEATHER';
 
-
 export const startLoadingAction = () => ({
   type: START_LOADING
 });
