@@ -1,0 +1,42 @@
+.App {
+  margin: 20px auto;
+}
+
+.app-title {
+  text-align: center;
+}
+
+.weather-row {  
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.weather-row > div {
+  flex-basis: 25%;
+  flex-grow: 0;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+.card-text {
+  margin-top: 8px;
+}
+
+.search-box {
+  position: relative;
+  max-width: 320px;
+}
+
+.search-box > span {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  line-height: 38px;
+  color: #495057;
+}
+
