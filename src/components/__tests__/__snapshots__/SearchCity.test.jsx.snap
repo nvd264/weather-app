@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchCity Component Should match the snapshot on init 1`] = `
+<div>
+  <div
+    class="search-box"
+  >
+    <input
+      aria-label="search-input"
+      class="form-control"
+      id="cityName"
+      placeholder="City name..."
+      type="text"
+      value=""
+    />
+    
+  </div>
+</div>
+`;

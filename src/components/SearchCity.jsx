@@ -1,26 +1,34 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import { getCityWeatherAction } from '../store/action';
+import PropTypes from 'prop-types';
 
-const SearchCity = ({ getWeatherInfo }) => {
+const SearchCity = ({ onSearch }) => {
   const [cityName, setCityName] = useState('');
   
   const handleSearchWeather = e => {
-    if (e.key === 'Enter') {
-      getWeatherInfo(cityName);
+    if (e.key === 'Enter' && cityName) {
+      onSearch(cityName);
     }
   };
   
   return (
     <div className="search-box">
-      <input onChange={(e) => setCityName(e.target.value)} onKeyPress={handleSearchWeather} type="text" className="form-control" id="cityName" placeholder="City name..." />
+      <input
+        aria-label="search-input"
+        onChange={(e) => setCityName(e.target.value)}
+        onKeyPress={handleSearchWeather}
+        type="text"
+        className="form-control"
+        id="cityName"
+        placeholder="City name..."
+        value={cityName}
+      />
       {cityName && <span>&#9166; Enter</span>}
     </div>  
   )
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  getWeatherInfo: cityName => dispatch(getCityWeatherAction(cityName)),
-});
+SearchCity.propTypes = {
+  onSearch: PropTypes.func.isRequired,
+}
 
-export default connect(null, mapDispatchToProps)(SearchCity);
+export default SearchCity;

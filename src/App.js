@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import './App.css';
 
 import SearchCity from './components/SearchCity';
 import WeatherDay from './components/WeatherDay';
 import Loading from './components/Loading';
 
-function App({ loading, weatherList }) {
+function App({ loading, weatherList, getWeatherInfo }) {
   return (
     <div className="App">
       <div className="container">
         <h2 className="app-title">Weather App</h2>
-        <SearchCity />
+        <SearchCity onSearch={getWeatherInfo} />
         {loading ? <Loading /> : (
           <div className="weather-row">
             {Object.keys(weatherList || {}).map(key =>
@@ -31,7 +30,8 @@ function App({ loading, weatherList }) {
 
 App.propTypes = {
   weatherList: PropTypes.shape({}),
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  getWeatherInfo: PropTypes.func.isRequired,
 }
 
 App.defaultProps = {
@@ -39,9 +39,4 @@ App.defaultProps = {
   loading: false,
 }
 
-export const mapStateToProps = ({ weather }) => ({
-  weatherList: weather.weatherInfo.data,
-  loading: weather.loading,
-})
-
-export default connect(mapStateToProps, null)(App);
+export default App;

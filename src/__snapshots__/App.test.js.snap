@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Should match the snapshot on init 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      class="container"
+    >
+      <h2
+        class="app-title"
+      >
+        Weather App
+      </h2>
+      <div
+        class="search-box"
+      >
+        <input
+          aria-label="search-input"
+          class="form-control"
+          id="cityName"
+          placeholder="City name..."
+          type="text"
+          value=""
+        />
+        
+      </div>
+      <div
+        class="weather-row"
+      />
+      <p>
+        No data found
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App Component Should match the snapshot with weather info 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <div
+      class="container"
+    >
+      <h2
+        class="app-title"
+      >
+        Weather App
+      </h2>
+      <div
+        class="search-box"
+      >
+        <input
+          aria-label="search-input"
+          class="form-control"
+          id="cityName"
+          placeholder="City name..."
+          type="text"
+          value=""
+        />
+        
+      </div>
+      <div
+        class="weather-row"
+      >
+        <div
+          class="card-deck"
+        >
+          <div
+            class="card bg-default"
+          >
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Thursday
+              </h5>
+              <h6>
+                2021-1-21
+              </h6>
+              <img
+                alt="Weather on 2021-1-21"
+                src="http://openweathermap.org/img/wn/test1@2x.png"
+              />
+              <p
+                class="card-text"
+              >
+                1
+                ° - 
+                2
+                °
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card-deck"
+        >
+          <div
+            class="card bg-default"
+          >
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Friday
+              </h5>
+              <h6>
+                2021-1-22
+              </h6>
+              <img
+                alt="Weather on 2021-1-22"
+                src="http://openweathermap.org/img/wn/test2@2x.png"
+              />
+              <p
+                class="card-text"
+              >
+                3
+                ° - 
+                4
+                °
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="card-deck"
+        >
+          <div
+            class="card bg-default"
+          >
+            <div
+              class="card-body"
+            >
+              <h5
+                class="card-title"
+              >
+                Saturday
+              </h5>
+              <h6>
+                2021-1-23
+              </h6>
+              <img
+                alt="Weather on 2021-1-23"
+                src="http://openweathermap.org/img/wn/test3@2x.png"
+              />
+              <p
+                class="card-text"
+              >
+                5
+                ° - 
+                6
+                °
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

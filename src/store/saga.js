@@ -2,7 +2,7 @@ import { put, call, takeLeading } from 'redux-saga/effects';
 import { GET_CITY_WEATHER, startLoadingAction, endLoadingAction, updateCityWeatherAction } from './action';
 import { searchLocationApi } from '../helpers/api';
 
-function* getCityWeatherSaga({ payload: { cityName } }) {
+export function* getCityWeatherSaga({ payload: { cityName } }) {
   try {
     yield put(startLoadingAction());
     const cityInfo = yield call(searchLocationApi, cityName);
