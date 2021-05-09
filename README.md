@@ -1,5 +1,4 @@
 # Weather App
-
 ## Getting Started
 - NodeJS >= v10.x.x
 - Yarn >= 1.7.x
